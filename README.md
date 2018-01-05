@@ -1,4 +1,4 @@
-# ruby-bitcoin-secp256k1
+# secp256k1-ruby
 
 ## Prerequiste
 
@@ -14,10 +14,10 @@ git submodule update --init --recursive
 ## Install
 
 ```
-gem i bitcoin-secp256k1
+gem i secp256k1-ruby
 ```
 
-Then `require 'secp256k1'` (without `bitcoin-` prefix) in your source code.
+Then `require 'secp256k1'` in your source code.
 
 ## Usage
 
@@ -26,4 +26,3 @@ Check [test](test) for examples.
 ## LICENSE
 
 [MIT License](LICENSE)
-
