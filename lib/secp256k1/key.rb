@@ -113,7 +113,7 @@ module Secp256k1
 
       result = FFI::MemoryPointer.new :char, 32
 
-      res = C.secp256k1_ecdh @ctx, result, @public_key, scalar
+      res = C.secp256k1_ecdh @ctx, result, @public_key, scalar, nil, nil
       raise AssertError, "invalid scalar (#{scalar})" unless res == 1
 
       result.read_bytes(32)
