@@ -87,5 +87,8 @@ module Secp256k1
 
     # int secp256k1_ecdh(const secp256k1_context* ctx, unsigned char *output, const secp256k1_pubkey *point, const unsigned char *scalar, secp256k1_ecdh_hash_function hashfp, void *data)
     attach_function :secp256k1_ecdh, [:pointer, :pointer, :pointer, :pointer, :pointer, :pointer], :int
+    
+    # static int nonce_function_rfc6979(unsigned char *nonce32, const unsigned char *msg32, const unsigned char *key32, const unsigned char *algo16, void *data, unsigned int counter)
+    attach_function :nonce_function_rfc6979, [:pointer, :pointer, :pointer, :pointer, :pointer, :int], :int
   end
 end
